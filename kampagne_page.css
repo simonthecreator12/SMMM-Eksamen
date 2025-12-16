@@ -1,0 +1,14 @@
+
+.main_container{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 768px) {
+
+}

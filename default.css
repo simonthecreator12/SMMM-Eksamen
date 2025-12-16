@@ -1,0 +1,106 @@
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*Font weight = bold(700) - Overskrifter */
+  /*Font weight = Regular(500)*/
+  /*Font weight = Medium(400)*/
+  font-family: 'Raleway', sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.menu_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  color: #fff;
+  position: relative;
+  border-bottom: 1px solid #222;
+  margin-bottom: 30px;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  height: 36px;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+/* ===== BURGER ===== */
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  display: block;
+}
+
+/* ===== MENU (mobile) ===== */
+.nav-links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  background-color: #ffffff;
+  color: #000000;
+  /*Font weight = bold(700)*/
+  font-weight: 700;
+}
+
+/* BLACK LINES IN MENU */
+.nav-links li {
+  border-top: 1px solid #222;
+}
+
+.nav-links a {
+  padding: 16px 20px;
+  display: block;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+/* ===== ACTIVE STATE ===== */
+.nav-links.active {
+  display: flex;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .nav-links {
+    background-color: transparent;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: auto;
+    list-style: none;
+  }
+
+  .nav-links li {
+    border: none;
+  }
+
+  .nav-links a {
+    padding: 0;
+  }
+}
