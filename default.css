@@ -3,11 +3,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /*Font weight = bold(700) - Overskrifter */
-  /*Font weight = Regular(500)*/
-  /*Font weight = Medium(400)*/
+
+  /* font-weigh 800
+  fontWeights-bold 700
+  fontWeights-light 300
+  fontWeights-medium 500
+  fontWeights-regular 400 */
+  
+  /* Skrifttype for hele siden */
   font-family: 'Raleway', sans-serif;
+
+  /* Skrif farve for hele tiden */
+  color: rgb(33, 48, 63);
 }
+
+h1{
+    font-weight: 700;
+}
+
+h3{
+    font-weight: 400;
+}
+
 
 /* ===== NAVBAR ===== */
 .menu_bar {
@@ -128,6 +145,38 @@
       color: #000000;
 }
 
+
+.button {
+  background-color: #e21e27 ;
+  border-radius: 4px;
+  border-style: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  width: auto;
+    margin: 0 auto;
+}
+.button:hover {
+  opacity: .75;
+}
+
+
+.dummy_img{
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    width: 70%;
+    background-color: #323232;
+    border-radius: 50px;
+}
 
 /* ===== DESKTOP ===== */
 @media (min-width: 768px) {
