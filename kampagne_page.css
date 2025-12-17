@@ -25,6 +25,14 @@
     border-radius: 50px;
 }
 
+.KampagneVideo{
+                margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    width: 50%;
+    background-color: antiquewhite;
+    border-radius: 50px;
+}
+
 /* ===== DESKTOP ===== */
 @media (min-width: 768px) {
 
