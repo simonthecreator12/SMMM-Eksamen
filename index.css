@@ -1,0 +1,363 @@
+/* =========================================================
+   index.css (KUN FORSIDE)
+   Mål:
+   - Siden er 1 flade (ingen “second background”)
+   - Header fylder ud og ser normal ud
+   - Mobil: centreret og clean
+   - Desktop: 2 kolonner som din Figma
+   ========================================================= */
+
+/* -------------------------
+   HEADER
+   ------------------------- */
+.site-header {
+  background: #f2f2f2; /* header-bar farve */
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+}
+
+/* Burger (mobil) */
+.nav-burger {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.burger {
+  width: 18px;
+  height: 2px;
+  background: #111111;
+  position: relative;
+  border-radius: 99px;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: #111111;
+  border-radius: 99px;
+}
+
+.burger::before {
+  top: -6px;
+}
+.burger::after {
+  top: 6px;
+}
+
+/* Desktop links (skjules på mobil) */
+.nav-links {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: #111111;
+}
+
+.nav-links a.is-active {
+  font-weight: 700;
+}
+
+/* Logo */
+.brand-logo {
+  width: 110px;
+  height: auto;
+  display: block;
+}
+
+/* -------------------------
+   MAIN / LANDING
+   (ingen panel-kort-look)
+   ------------------------- */
+.landing {
+  background: #ffffff; /* samme som body */
+  padding: 24px 0 40px;
+}
+
+/* Panel fjernet (hvis din HTML har .panel, gør vi den “neutral”) */
+.panel {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Mobil: stack */
+.landing-grid {
+  display: block;
+}
+
+/* VENSTRE: centreret på mobil */
+.landing-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Pæn maks-bredde så ting ikke bliver for brede */
+.title,
+.lead,
+.subtitle,
+.bullets,
+.steps {
+  width: 100%;
+  max-width: 360px;
+}
+
+.title {
+  margin: 0 0 10px;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.lead {
+  margin: 0 0 18px;
+  font-size: 14px;
+  color: #5b5b5b;
+}
+
+.subtitle {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.bullets {
+  margin: 0 0 18px;
+  padding: 0;
+  list-style-position: inside;
+  color: #5b5b5b;
+  font-size: 14px;
+}
+
+/* Steps: centreret container, men venstrejusteret tekst (mest clean) */
+.steps {
+  margin-top: 18px;
+  text-align: left;
+  order: 50;
+}
+
+.step-label {
+  margin: 14px 0 4px;
+  font-size: 12px;
+  color: #6b6b6b;
+}
+
+.step-text {
+  margin: 0;
+  font-size: 14px;
+  color: #5b5b5b;
+}
+
+/* CTA: lille, centreret og ALTID nederst i venstre kolonne */
+.btn-primary {
+  width: auto;
+  padding: 12px 26px;
+  margin-top: 18px;
+  order: 99;
+}
+
+/* HØJRE: billeder under teksten på mobil */
+.landing-right {
+  margin-top: 22px;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+/* Media cards */
+.media {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+  background: #ffffff;
+  position: relative;
+}
+
+.tag {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e6e6e6;
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 1.2;
+  max-width: 220px;
+}
+
+/* -------------------------
+   MOBILE MENU (overlay)
+   CSS klar – kræver JS for at åbne/lukke
+   ------------------------- */
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 50;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: min(320px, 85vw);
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e6e6e6;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+  z-index: 60;
+}
+
+.menu-close {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.mobile-menu a {
+  padding: 12px 10px;
+  border-radius: 12px;
+}
+
+.mobile-menu a:hover {
+  background: #f5f5f5;
+}
+
+/* -------------------------
+   FOOTER
+   ------------------------- */
+.site-footer {
+  background: #3f3f3f;
+  color: #ffffff;
+  padding: 28px 0;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  align-items: center;
+}
+
+.footer-text {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 420px;
+}
+
+.footer-brand img {
+  width: 110px;
+  height: auto;
+}
+
+/* -------------------------
+   DESKTOP
+   ------------------------- */
+@media (min-width: 1000px) {
+  /* Desktop: ingen burger-menu overlay  */
+  .menu-backdrop,
+  .mobile-menu {
+    display: none !important;
+  }
+  .nav-burger {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+  }
+
+  .brand-logo {
+    width: 150px;
+  }
+
+  /* 2 kolonner som Figma */
+  .landing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* Venstre: venstrejusteret for læsbarhed */
+  .landing-left {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .title,
+  .lead,
+  .subtitle,
+  .bullets,
+  .steps {
+    max-width: 460px;
+  }
+
+  /* CTA stadig centreret i venstre kolonne */
+  .btn-primary {
+    align-self: center;
+  }
+
+  /* Billeder mod højre */
+  .landing-right {
+    margin-top: 0;
+    justify-items: end;
+    gap: 16px;
+  }
+
+  .media {
+    width: 420px;
+  }
+  .media-large {
+    width: 520px;
+  }
+
+  /* Footer desktop */
+  .footer-inner {
+    grid-template-columns: 1fr auto;
+    justify-items: start;
+    gap: 24px;
+  }
+
+  .footer-text {
+    text-align: left;
+    max-width: 520px;
+  }
+}
+/* Gør hidden-attributten "stærk", så overlays kan skjules korrekt */
+[hidden] {
+  display: none !important;
+}
