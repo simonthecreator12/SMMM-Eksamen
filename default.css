@@ -1,79 +1,209 @@
-/* =========================================================
-   default.css (FÆLLES)
-   - Basis reset + typografi
-   - Container
-   - Knapper (CTA)
-   ========================================================= */
-
-/* Reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Ingen side-scroll / overflow bugs */
-html,
-body {
+/*Reset*/
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
+  /* font-weigh 800
+  fontWeights-bold 700
+  fontWeights-light 300
+  fontWeights-medium 500
+  fontWeights-regular 400 */
+  
+  /* Skrifttype for hele siden */
+  font-family: 'Raleway', sans-serif;
+
+  /* Skrif farve for hele tiden */
+  color: rgb(33, 48, 63);
+}
+
+h1{
+    font-weight: 700;
+}
+
+h3{
+    font-weight: 400;
+}
+
+
+/* ===== NAVBAR ===== */
+.menu_bar {
+    z-index: 1000;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: rgba(227, 227, 227, 0.8);
+  color: #fff;
+  border-bottom: 1px solid #222;
+  margin-bottom: 30px;
   width: 100%;
-  overflow-x: hidden;
 }
 
-/* Base typography */
-body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #111111;
-  background: #ffffff;
+/* ===== LOGO ===== */
+.logo {
+  height: 36px;
 }
 
-img {
-  max-width: 100%;
+.logo img {
+  height: 100%;
+  width: auto;
   display: block;
 }
 
-a {
-  color: inherit;
+/* ===== BURGER ===== */
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  display: block;
+}
+
+/* ===== MENU (mobile) ===== */
+.nav-links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  background-color: rgba(227, 227, 227, 1);
+  color: #000000;
+  /*Font weight = bold(700)*/
+  font-weight: 700;
+}
+
+/* BLACK LINES IN MENU */
+.nav-links li {
+  border-top: 1px solid #222;
+}
+
+.nav-links a {
+  padding: 16px 20px;
+  display: block;
   text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
-button {
-  font: inherit;
+/* ===== ACTIVE STATE ===== */
+.nav-links.active {
+  display: flex;
 }
 
-/* Container (bruges på alle sider) */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 16px;
+
+/* Footer */
+.page_footer{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 40px;
+  width: 100%;
+  height: 250px;
+  background-color: rgba(227, 227, 227, 0.8);
 }
 
-/* Knapper (fælles komponent) */
-/* Base button – fælles for hele projektet */
-.btn {
-  display: inline-flex;
-  align-items: center;
+.footer_logo_container{
+  display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
-  padding: 10px 18px;
-  border-radius: 10px;
-  font-weight: 500;
+}
+
+.page_footer img{
+  object-fit: contain;
+  width: 75%;
+}
+
+.footer_container span{
+  display: block;
+  height: 2px;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-links{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  color: #000000;
+
+  gap: 10px;
+}
+.footer-links a{
+      color: #000000;
+}
+
+
+.button {
+  background-color: #e21e27 ;
+  border-radius: 4px;
+  border-style: none;
+  color: #fff;
   cursor: pointer;
-  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  width: auto;
+    margin: 0 auto;
+}
+.button:hover {
+  opacity: .75;
 }
 
-/* Primary CTA */
-.btn-primary {
-  background: #d50000;
-  color: #ffffff;
-  border: none;
+
+.dummy_img{
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    width: 70%;
+    background-color: #323232;
+    border-radius: 50px;
 }
 
-/* Secondary CTA (neutral – som i Figma) */
-.btn-secondary {
-  background: #ffffff;
-  color: #111111;
-  border: 1px solid #cfcfcf;
+/* ===== DESKTOP ===== */
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+
+  .nav-links {
+    background-color: transparent;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: auto;
+    list-style: none;
+  }
+
+  .nav-links li {
+    border: none;
+  }
+
+  .nav-links a {
+    padding: 0;
+  }
+
+  .page_footer img{
+    object-fit: contain;
+    width: 50%;
+}
 }
