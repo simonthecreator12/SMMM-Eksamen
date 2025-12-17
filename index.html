@@ -1,179 +1,90 @@
 <!DOCTYPE html>
 <html lang="da">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Øremærket+ – Forside</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-    <!-- Fælles CSS (gruppen) -->
-    <link rel="stylesheet" href="./default.css" />
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="index.css">
 
-    <!-- Kun denne side -->
-    <link rel="stylesheet" href="./index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <nav class="menu_bar">
+      <div class="logo_container">
+        <a href="index.html"
+          ><img src="./billeder/dankort_logo.png" alt="logo image" class="logo"
+        /></a>
+      </div>
 
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="container">
-            <nav class="topbar" aria-label="Hovednavigation">
+      <button class="burger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-                <!-- Burger (mobil) -->
-                <button class="nav-burger" type="button" aria-label="Åbn menu">
-                    <span class="burger" aria-hidden="true"></span>
-                </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="kampagne_page.html">Kampagne</a></li>
+        <li><a href="fond.html">ØremærketPlus+</a></li>
+      </ul>
+    </nav>
 
-                <!-- Desktop links -->
-                <ul class="nav-links">
-                    <li><a href="./vaelg-fond.html">mærkesager</a></li>
-                    <li><a class="is-active" href="./index.html" aria-current="page">Forside</a></li>
-                    <li><a href="./content.html">Content</a></li>
-                </ul>
+    <section class="main_container">
+        <div class="grid_container">
+            <h1>Støt sociale fællesskaber – hver gang du betaler. <br>Støt øremærket plus</h1>
+            <h3>Vælg et formål. Donér automatisk 1 krone pr. betaling. Gennemsigtigt, fair og med reel impact.</h3>
+            <img src="./img/hero.jpg" alt="" class="mobile_view">
+            <h1>Hvorfor Øremærket+</h1>
+            <p>Mange udfordringer kan ikke løses med én indsats eller ét enkelt bidrag. Når støtte er stabil og forudsigelig, kan den skabe reel forandring over tid.
+            Øremærket+ samler små bidrag og omsætter dem til langsigtet støtte til:</p>
+            <ul>
+                <li>Mental trivsel og fællesskab.</li>
+                <li>Sundhed, sygdom og støtte til pårørende.</li>
+                <li>Sociale udfordringer i hverdagen.</li>
+                <li>Natur og havmiljø.</li>
+            </ul>
 
-                <!-- Logo -->
-                <a class="brand" href="./index.html" aria-label="Forside">
-                    <img class="brand-logo" src="./img/dankort.jpg" alt="Dankort logo" />
-                </a>
-
-            </nav>
+            <a href="kampagne_page.html"><button class="button2">Se mere om problemerne her</button></a>
+            <h1>Sådan fungerer Øremærket+</h1>
+            <h4>Step 1 :</h4>
+            <h1>Vælg et formål.</h1>
+            <h3>Vælg mellem sociale initiativer, der gør en reel forskel.</h3>
+            <h4>Step 2 :</h4>
+            <h1>Betal som du plejer</h1>
+            <h3>Hver gang du bruger dit Dankort, aktiveres donationen.</h3>
+            <h4>Step 3 :</h4>
+            <h1>1 krone doneres automatisk</h1>
+            <h3>Små bidrag – stor samlet effekt.</h3>
+            <a href="fond.html">
+                <button class="button">Vælg fond</button>
+            </a>
+        </div> 
+        <div class="image_grid">
+            <img src="./img/hero.jpg" alt="" class="imges desktop_view">
+            <img src="./img/card1.jpg" alt="Betaling" class="imges">
+            <img src="./img/card2.jpg" alt="Penge plante" class="imges">
         </div>
-    </header>
 
-    <!-- MOBILE MENU (overlay) -->
-    <div class="menu-backdrop" hidden></div>
+    </section>
 
-    <aside class="mobile-menu" hidden aria-label="Menu">
-        <button class="menu-close" type="button" aria-label="Luk menu">✕</button>
-        <a href="./vaelg-fond.html">mærkesager</a>
-        <a href="./index.html" aria-current="page">Forside</a>
-        <a href="./content.html">Content</a>
-    </aside>
-
-    <!-- MAIN -->
-    <main>
-        <section class="landing">
-            <div class="container">
-                <div class="panel">
-                    <div class="landing-grid">
-
-                        <!-- VENSTRE: TEKST -->
-                        <div class="landing-left">
-
-                            <!-- Hero -->
-                            <h1 class="title">
-                                Støt sociale fællesskaber – hver gang du betaler.<br />
-                                Støt øremærket plus
-                            </h1>
-
-                            <p class="lead">
-                                Vælg et formål. Donér automatisk 1 krone pr. betaling.
-                                Gennemsigtigt, fair og med reel impact.
-                            </p>
-
-                            <!-- Hvorfor -->
-                            <h2 class="subtitle">Hvorfor Øremærket+</h2>
-
-                            <ul class="bullets">
-                                <li>Grønland og Færøerne står midt i sociale og strukturelle kriser</li>
-                                <li>Historier og lokale udfordringer præger lokalsamfund</li>
-                                <li>Ulighed og manglende mental sundhed rammer hårdt</li>
-                                <li>Industrialisering og utydelige oversigter kan gøre det svært at støtte lokalt</li>
-                            </ul>
-
-                            <a class="btn btn-secondary" href="./content.html">
-                                se mere om problemerne
-                            </a>
-
-
-                            <!-- Sådan fungerer det -->
-                            <div class="steps" aria-label="Sådan fungerer Øremærket+">
-                                <h2 class="subtitle">Sådan fungerer Øremærket+</h2>
-
-                                <p class="step-label">Step 1</p>
-                                <p class="step-text"><strong>Vælg et formål</strong><br />
-                                    Vælg mellem sociale initiativer, der gør en reel forskel.
-                                </p>
-
-                                <p class="step-label">Step 2</p>
-                                <p class="step-text"><strong>Betal som du plejer</strong><br />
-                                    Hver gang du bruger dit Dankort, aktiveres donationen.
-                                </p>
-
-                                <p class="step-label">Step 3</p>
-                                <p class="step-text"><strong>1 krone doneres automatisk</strong><br />
-                                    Små bidrag – stor samlet effekt.
-                                </p>
-                            </div>
-
-                            <!-- Primær CTA -->
-                            <a class="btn btn-primary" href="./vaelg-fond.html">vælg formål</a>
-
-                        </div>
-
-                        <!-- HØJRE: BILLEDER -->
-                        <div class="landing-right">
-
-                            <!-- Hero billede + tag (overlay inde i billedet) -->
-                            <div class="media media-large">
-                                <img src="./img/hero.jpg" alt="Naturbillede som symbol på fællesskab og håb" />
-                                <div class="tag tag-wide">Klar til at gøre en forskel?</div>
-                            </div>
-
-
-
-                            <!-- Donation billede + tag -->
-                            <div class="media">
-                                <img src="./img/card1.jpg" alt="Mønter i glas med spirende plante" />
-                                <div class="tag">Det tager under ét minut at komme i gang.</div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-inner">
-                <p class="footer-text">
-                    Tak for støtten.<br />
-                    Din brug af Dankort er med til at støtte lokale fællesskaber og initiativer
-                    der gør hverdagen lidt bedre for andre.
-                </p>
-
-                <div class="footer-brand" aria-label="Dankort brand">
-                    <img src="./img/dankort.jpg" alt="Dankort logo" />
-                </div>
-            </div>
-        </div>
+    <footer class="page_footer">
+      <div class="footer_container">
+        <h1>Dankort.</h1>
+        <h3>Billigt. Sikkert. Og meget mere end det.</h3>
+        <span></span>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">About</a></li>
+      </ul>
+      </div>
+      <div class="footer_logo_container">
+        <img src="./billeder/dankort_logo.png" alt="dankort_logo">
+      </div>
     </footer>
-    <script>
-        const burger = document.querySelector(".nav-burger");
-        const menu = document.querySelector(".mobile-menu");
-        const backdrop = document.querySelector(".menu-backdrop");
-        const closeBtn = document.querySelector(".menu-close");
-
-        function openMenu() {
-            menu.hidden = false;
-            backdrop.hidden = false;
-        }
-
-        function closeMenu() {
-            menu.hidden = true;
-            backdrop.hidden = true;
-        }
-
-        burger?.addEventListener("click", openMenu);
-        closeBtn?.addEventListener("click", closeMenu);
-        backdrop?.addEventListener("click", closeMenu);
-    </script>
-
+    <script src="burger_menu.js"></script>
 </body>
-
 </html>

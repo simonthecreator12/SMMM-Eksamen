@@ -32,8 +32,13 @@
     .dummy_img{
     margin: 0 auto;
     aspect-ratio: 16 / 9;
-    width: 30%;
+    width: 60%;
     background-color: #323232;
     border-radius: 50px;
 }
+
+    .grid_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
