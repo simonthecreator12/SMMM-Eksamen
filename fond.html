@@ -40,28 +40,28 @@
           <h1>Formål 1 - Mental Sundhed</h1>
           <div class="dummy_img"></div>
           <p class="beskrivelse">Støt initiativer der hjælper unge og voksne med adgang til rådgivning, fællesskab og støtte.</p>
-          <button class="button">Læs mere & vælg</button>
+          <button class="button" onclick="goToFond(1)">Læs mere & vælg</button>
         </section>
 
         <section class="type_container type2">
           <h1>Formål 2 - Social Ulighed</h1>
           <div class="dummy_img"></div>
           <p class="beskrivelse">Hjælp udsatte familier og børn i Danmark med basale ressourcer og trygge miljøer.</p>
-          <button class="button">Læs mere & vælg</button>
+          <button class="button" onclick="goToFond(2)">Læs mere & vælg</button>
         </section>
 
         <section class="type_container type3">
           <h1>Formål 3 - Lokale Fællesskaber</h1>
           <div class="dummy_img"></div>
           <p class="beskrivelse">Gør det muligt for små lokalsamfund at skabe aktiviteter, fællesrum og støtteordninger. </p>
-          <button class="button">Læs mere & vælg</button>
+          <button class="button" onclick="goToFond(3)">Læs mere & vælg</button>
         </section>
 
         <section class="type_container type4">
           <h1>Formål 4 - Dansk Natur</h1>
           <div class="dummy_img"></div>
           <p class="beskrivelse">Gør det muligt for lokalsamfund at bevare og styrke den danske natur gennem lokale naturaktiviteter, fælles projekter og grønne initiativer.</p>
-          <button class="button">Læs mere & vælg</button>
+          <button class="button"onclick="goToFond(4)">Læs mere & vælg</button>
         </section>
       </div>
 
@@ -87,5 +87,11 @@
     </footer>
 
     <script src="burger_menu.js"></script>
+
+    <script>
+      function goToFond(id) {
+      window.location.href = `fond_detalje.html?id=${id}`
+    }
+</script>
 </body>
 </html>
