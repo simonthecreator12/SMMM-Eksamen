@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="robots" content="noindex" />
+    <title>Vælg fond</title>
 
     <link rel="stylesheet" href="default.css">
     <link rel="stylesheet" href="fond_detalje.css">
@@ -14,7 +15,7 @@
     <nav class="menu_bar">
       <div class="logo_container">
         <a href="index.html"
-          ><img src="./billeder/dankort_logo.png" alt="logo image" class="logo"
+          ><img src="https://wuymejpuvsgyzprfluan.supabase.co/storage/v1/object/public/eksamenimages/dankort_logo.webp" alt="logo image" class="logo"
         /></a>
       </div>
 
@@ -32,7 +33,9 @@
     </nav>
 
     <section class="main_container">
-        <h1 style="margin-bottom: 50px;">ØremærketPlus+ er nu aktivt</h1>
+        <div class="hide active_markat">
+          <h1>ØremærketPlus+ er nu aktivt</h1>
+        </div>
         <section class="grid">
             <div class="grid_container">
                 <h1 class="fond-title"></h1>
@@ -54,12 +57,13 @@
 
         <div class="grid_container">
             <h1>Tak for din indsats</h1>
-            <div class="content_container"></div>
+            <img src="" class="fond-image imges" alt="Valgt fond billede">
 
             <div class="estimeretContainer">
                 <h1>Estimerede donationer årligt :</h1>
                 <h1>10.000.000</h1>
             </div>
+            <button class="button">vælg</button>
         </div></section>
     </section>
 
@@ -69,33 +73,19 @@
         <h3>Billigt. Sikkert. Og meget mere end det.</h3>
         <span></span>
         <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="index.html">Forside</a></li>
+        <li><a href="kampagne_page.html">Kampagne</a></li>
+        <li><a href="fond.html">ØremærketPlus+</a></li>
       </ul>
       </div>
       <div class="footer_logo_container">
-        <img src="./billeder/dankort_logo.png" alt="dankort_logo">
+        <img src="https://wuymejpuvsgyzprfluan.supabase.co/storage/v1/object/public/eksamenimages/dankort_logo.webp" alt="dankort_logo">
       </div>
   
 
     </footer>
     <script src="burger_menu.js"></script>
-    <script src="fond_detail.js"></script>
-
-
-    <script>
-        const supabaseUrl = 'https://wuymejpuvsgyzprfluan.supabase.co';
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind1eW1lanB1dnNneXpwcmZsdWFuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYwNjg0ODksImV4cCI6MjA4MTY0NDQ4OX0.T0rIx7U34AJOIU7hiRan_eHes2ZsBfhkjpTTgRXBw8k'; // You can't use process.env in the browser
-        const supabase = supabase.createClient(supabaseUrl, supabaseKey);
-
-        // Example usage:
-        async function test() {
-            const { data, error } = await supabase.from('your_table').select('*');
-            console.log(data, error);
-        }
-        test();
-</script>
+    <script type="module" src="fond_detail.js"></script>
+    <script src="buttonactive.js"></script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@supabase/supabase-js": "^2.88.0"
+  },
+  "name": "smmm-eksamen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "burger_menu.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonthecreator12/SMMM-Eksamen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/simonthecreator12/SMMM-Eksamen/issues"
+  },
+  "homepage": "https://github.com/simonthecreator12/SMMM-Eksamen#readme"
+}

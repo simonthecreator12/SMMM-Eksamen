@@ -33,6 +33,26 @@
         gap: 30px;
     }
 
+    .imges{
+        width: 60%;
+        margin: 0 auto;
+        border-radius: 30px;
+    }
+
+    .show{
+        display:block;
+    }
+    .hide{
+        display: none;
+    }
+    .active_markat{
+                margin: 0 auto;
+        background-color: rgb(47, 223, 47) ;
+        padding: 15px;
+        width: fit-content;
+        border-radius: 15px;
+    }
+
 /* ===== DESKTOP ===== */
 @media (min-width: 768px) {
     .main_container{
@@ -65,7 +85,7 @@
     }
 
     .estimeretContainer{
-                    margin: 0 auto;
+        margin: 0 auto;
         background-color: #29BDE2;
         padding: 10px;
         width: fit-content;
@@ -75,6 +95,31 @@
     p{
         width: 40ch;
         margin: 0 auto;
+    }
+
+    .fond-description{
+        line-height: 30px;
+    }
+
+    .show{
+        display:block;
+    }
+    .hide{
+        display: none;
+    }
+
+    .active_markat{
+                margin: 0 auto;
+        background-color: rgb(47, 223, 47) ;
+        padding: 15px;
+        width: fit-content;
+        border-radius: 15px;
+    }
+
+    .imges{
+        width: 60%;
+        margin: 0 auto;
+        border-radius: 30px;
     }
 
 }
